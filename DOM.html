@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lista{
+            list-style: none;
+            padding: 20px;
+            width: 300px;
+
+        }
+        .lista li{
+            padding: 7px 10px;
+            background: purple;
+            color: white;
+            border: 1px solid beige;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul class="lista">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+
+    </ul>
+
+    <script>
+        var contenedorLista = document.querySelector
+        ('.lista');
+        var listaItem1 = document.querySelector('.lista li:nth-child(1)');
+        var listaItem2 = document.querySelector('.lista li:nth-child(2)');
+        var listaItem3 = document.querySelector('.lista li:nth-child(3)');
+        var contador = 0;
+        contenedorLista.addEventListener('click'/*mouseover*/, () => {
+           setInterval(() =>{
+               listaItem1.innerText = contador;
+              contador++;
+           },1000)
+        } ); 
+
+      /*  contenedorLista.addEventListener('click', () => {
+            let nuevoElemento = document.createElement('li');
+            nuevoElemento.innerText = 'Te amo mi vida';
+            nuevoElemento.classList.add('nuevaclase')
+            nuevoElemento.id = 'nuevoid';
+            nuevoElemento.setAttribute('name', 'name');
+            //contenedorLista.appendChild(nuevoElemento);
+            contenedorLista.insertBefore(nuevoElemento, listaItem2);
+        });*/
+    </script>
+
+
+</body>
+</html>

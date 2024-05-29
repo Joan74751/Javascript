@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: black;
+        }
+        #animate{
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            position: absolute; 
+            background: purple;
+        }
+        button {
+            cursor: pointer;
+        }
+        p{
+            color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        
+
+        <div id="animate">
+            <p>
+                ¿Te quiers casar conmigo UwU? </p><br>
+                <button onclick="myMove()">SI</button>
+                <button>NO</button>
+            
+
+        </div>
+    </div>
+    <script>
+        const myMove = () => {
+            let id = null;
+
+            const elem = document.querySelector('#animate');
+            let pos = 0;
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 500){
+                    clearInterval(id);
+                }else{
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                    elem.style.right = pos + 'px';
+                    elem.style.bottom = pos + 'px';
+                }
+            }
+            
+  
+        }
+    </script>
+</body>
+</html>
